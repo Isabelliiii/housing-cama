@@ -5,176 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAMA Philadelphia - Residential Value Review</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=20260424-landing-hero-scroll">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=20260502-civic">
+    <style>
+        body { font-family: 'Open Sans', sans-serif; }
+    </style>
 </head>
-<body class="bg-[#121414] text-[#e2e2e2] font-inter">
-    <nav class="bg-[#1e2020]/95 border-b border-[#e2e2e2]/15 px-6 lg:px-8 py-4 sticky top-0 z-40">
-        <div class="max-w-7xl mx-auto flex items-center justify-between gap-6">
-            <a href="./" class="flex items-center gap-3">
-                <div class="w-9 h-9 bg-[#a0caff] text-[#121414] font-space-grotesk font-bold flex items-center justify-center">C</div>
+<body class="bg-[#f2f4f7] text-[#1a2035]">
+
+    <header class="bg-[#0f4d90] px-6 lg:px-10 py-0">
+        <div class="max-w-6xl mx-auto flex items-stretch gap-6">
+            <a href="./" class="flex items-center gap-3 py-4 border-b-2 border-transparent hover:border-white/60 transition-colors duration-150">
+                <div class="w-8 h-8 bg-white text-[#0f4d90] font-bold text-sm flex items-center justify-center flex-shrink-0">C</div>
                 <div>
-                    <div class="text-lg font-space-grotesk font-semibold tracking-wide">CAMA PHILADELPHIA</div>
-                    <div class="text-xs text-[#e2e2e2]/50 uppercase tracking-[0.2em]">Residential Value Review</div>
+                    <div class="text-white font-semibold text-sm tracking-wide leading-tight">CAMA PHILADELPHIA</div>
+                    <div class="text-white/60 text-[11px] uppercase tracking-widest leading-tight">Residential Value Review</div>
                 </div>
             </a>
-            <div class="hidden md:flex items-center gap-6 text-sm text-[#e2e2e2]/70">
-                <a href="#portals" class="hover:text-[#a0caff] transition-colors duration-200">Choose Portal</a>
-                <a href="./reviewer/" class="hover:text-[#a0caff] transition-colors duration-200">Housing Assessor</a>
-                <a href="./widget/" class="hover:text-[#a0caff] transition-colors duration-200">Property Owner</a>
-            </div>
         </div>
-    </nav>
+    </header>
 
-    <main>
-        <section class="landing-hero landing-hero-screen px-6 lg:px-8">
-            <div class="max-w-7xl mx-auto">
-                <div class="landing-hero-head landing-animate-left">
-                    <div class="inline-flex items-center gap-2 border border-[#a0caff]/30 bg-[#a0caff]/8 px-3 py-2 text-xs uppercase tracking-[0.24em] text-[#a0caff] landing-animate-up landing-delay-1">
-                        Philadelphia residential value review
+    <main class="max-w-6xl mx-auto px-6 lg:px-10 py-10 lg:py-14">
+
+        <div class="mb-8">
+            <div class="text-[11px] uppercase tracking-[0.22em] text-[#0f4d90] font-semibold mb-2">Philadelphia Office of Property Assessment</div>
+            <h1 class="text-2xl lg:text-3xl font-bold text-[#1a2035] leading-snug mb-2">
+                Residential Value Review
+            </h1>
+            <p class="text-[#4a5568] text-base max-w-2xl leading-relaxed">
+                Select a portal to review assessed property values across Philadelphia.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+
+            <!-- Tax Assessor -->
+            <a href="./reviewer/" class="portal-card portal-card--assessor group">
+                <div class="portal-card-header">
+                    <div class="portal-card-icon portal-card-icon--assessor">
+                        <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
                     </div>
-                    <div class="landing-title-row landing-animate-up landing-delay-2">
-                        <img src="./assets/team-mark.svg" alt="Yanyang Isabelle Sihan Zicheng team mark" class="landing-team-mark">
-                        <h1 class="text-5xl md:text-7xl lg:text-[7rem] font-space-grotesk font-bold leading-[0.92] max-w-5xl">
-                            One citywide system, two clear entry points.
-                        </h1>
-                    </div>
-                    <p class="text-lg lg:text-xl text-[#e2e2e2]/70 max-w-2xl leading-8 landing-animate-up landing-delay-3">
-                        Choose the assessor workflow for citywide review, or the owner workflow for one property and its nearby context.
-                    </p>
-                </div>
-                <div class="landing-scroll-hint landing-animate-up landing-delay-5">
-                    <span>Scroll to choose a portal</span>
-                    <span class="landing-scroll-arrow">&#8595;</span>
-                </div>
-            </div>
-        </section>
-
-        <section id="portals" class="px-6 lg:px-8 pb-16 pt-10 lg:pt-14">
-            <div class="max-w-7xl mx-auto">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    <a href="./reviewer/" class="portal-entry-card portal-entry-card--assessor group landing-scroll-reveal">
-                        <div class="portal-entry-header">
-                            <div class="portal-entry-icon bg-[#a0caff]/18 text-[#a0caff]">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <div class="text-xs uppercase tracking-[0.24em] text-[#a0caff]/75 mb-2">Housing Assessor Portal</div>
-                                <h3 class="portal-entry-title">Review values across the city.</h3>
-                            </div>
-                        </div>
-                        <p class="portal-entry-copy">
-                            Built for parcel review, value filtering, and citywide comparison on the map.
-                        </p>
-                        <div class="portal-entry-grid">
-                            <div>
-                                <div class="portal-entry-subtitle">Best for</div>
-                                <ul class="portal-entry-list">
-                                    <li>Citywide filtering and parcel triage</li>
-                                    <li>Comparing price bands and change patterns</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <div class="portal-entry-subtitle">Includes</div>
-                                <ul class="portal-entry-list">
-                                    <li>Vector tiles with predicted value styling</li>
-                                    <li>Histogram-driven map filtering</li>
-                                    <li>Parcel detail and chart drilldown</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="portal-entry-cta">
-                            <span>Open Assessor Portal</span>
-                            <svg class="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </div>
-                    </a>
-
-                    <a href="./widget/" class="portal-entry-card portal-entry-card--owner group landing-scroll-reveal">
-                        <div class="portal-entry-header">
-                            <div class="portal-entry-icon bg-[#ffb2b6]/16 text-[#ffb2b6]">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-3m0 0l7-4 7 4M5 9v10a1 1 0 001 1h12a1 1 0 001-1V9m-9 11l4-4m-4 4l-4-4"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <div class="text-xs uppercase tracking-[0.24em] text-[#ffb2b6]/75 mb-2">Property Owner Portal</div>
-                                <h3 class="portal-entry-title">Understand one property in neighborhood context.</h3>
-                            </div>
-                        </div>
-                        <p class="portal-entry-copy">
-                            Built for direct lookup, nearby context, and a clearer explanation of one address.
-                        </p>
-                        <div class="portal-entry-grid">
-                            <div>
-                                <div class="portal-entry-subtitle">Best for</div>
-                                <ul class="portal-entry-list">
-                                    <li>Address or OPA search for a single parcel</li>
-                                    <li>Comparing market and predicted values</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <div class="portal-entry-subtitle">Includes</div>
-                                <ul class="portal-entry-list">
-                                    <li>Property detail card with value change</li>
-                                    <li>Nearby change panel and radius overlay</li>
-                                    <li>Nearby examples and map jump links</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="portal-entry-cta portal-entry-cta--owner">
-                            <span>Open Property Owner Portal</span>
-                            <svg class="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="px-6 lg:px-8 py-16">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-12">
-                    <div class="text-xs uppercase tracking-[0.22em] text-[#e2e2e2]/45 mb-3">Workflow</div>
-                    <h2 class="text-3xl font-space-grotesk font-bold mb-2">What happens after entry.</h2>
-                    <p class="text-[#e2e2e2]/65 max-w-3xl mx-auto">
-                        A short view of what both portals are built to support.
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="workflow-card">
-                        <div class="workflow-step">01</div>
-                        <h3 class="workflow-title">Find the parcel</h3>
-                        <p class="workflow-copy">Start from an address, OPA ID, or the map itself.</p>
-                    </div>
-                    <div class="workflow-card">
-                        <div class="workflow-step">02</div>
-                        <h3 class="workflow-title">Read the values</h3>
-                        <p class="workflow-copy">See market context, predicted values, and linked chart views.</p>
-                    </div>
-                    <div class="workflow-card">
-                        <div class="workflow-step">03</div>
-                        <h3 class="workflow-title">Compare in context</h3>
-                        <p class="workflow-copy">Move between one parcel and the broader city or nearby context.</p>
+                    <div>
+                        <div class="portal-card-tag portal-card-tag--assessor">Tax Assessor</div>
+                        <h2 class="portal-card-title">Citywide Value Review</h2>
                     </div>
                 </div>
-            </div>
-        </section>
+                <p class="portal-card-desc">
+                    Filter and compare assessed values across all residential parcels. Identify valuation patterns, outliers, and neighborhood-level trends.
+                </p>
+                <ul class="portal-card-list">
+                    <li>Parcel-level filtering by value, change, and geography</li>
+                    <li>Histogram-driven map visualization</li>
+                    <li>Predicted vs. market value comparison</li>
+                </ul>
+                <div class="portal-card-cta portal-card-cta--assessor">
+                    <span>Open Assessor Portal</span>
+                    <svg class="w-4 h-4 transition-transform duration-150 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </div>
+            </a>
+
+            <!-- Property Owner -->
+            <a href="./widget/" class="portal-card portal-card--owner group">
+                <div class="portal-card-header">
+                    <div class="portal-card-icon portal-card-icon--owner">
+                        <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="portal-card-tag portal-card-tag--owner">Property Owner</div>
+                        <h2 class="portal-card-title">Single Property Lookup</h2>
+                    </div>
+                </div>
+                <p class="portal-card-desc">
+                    Look up one address or OPA parcel ID to understand its assessed value, nearby comparables, and neighborhood context.
+                </p>
+                <ul class="portal-card-list">
+                    <li>Address or OPA ID search</li>
+                    <li>Nearby comparable properties and radius overlay</li>
+                    <li>Value change context and market comparison</li>
+                </ul>
+                <div class="portal-card-cta portal-card-cta--owner">
+                    <span>Open Property Owner Portal</span>
+                    <svg class="w-4 h-4 transition-transform duration-150 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </div>
+            </a>
+
+        </div>
     </main>
 
-    <footer class="border-t border-[#e2e2e2]/12 px-6 lg:px-8 py-8">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-sm text-[#e2e2e2]/45">
-            <div>CAMA Philadelphia Residential Value Review</div>
-            <div class="flex items-center gap-5">
-                <a href="./reviewer/" class="hover:text-[#a0caff] transition-colors duration-200">Housing Assessor Portal</a>
-                <a href="./widget/" class="hover:text-[#a0caff] transition-colors duration-200">Property Owner Portal</a>
+    <footer class="border-t border-[#dde3ea] px-6 lg:px-10 py-5 mt-4">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-xs text-[#718096]">
+            <div>Philadelphia Office of Property Assessment &mdash; CAMA Residential Value Review</div>
+            <div class="flex items-center gap-4">
+                <a href="./reviewer/" class="hover:text-[#0f4d90] transition-colors duration-150">Tax Assessor Portal</a>
+                <a href="./widget/" class="hover:text-[#0f4d90] transition-colors duration-150">Property Owner Portal</a>
             </div>
         </div>
     </footer>
+
 </body>
 </html>

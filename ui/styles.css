@@ -915,3 +915,176 @@ button:hover svg,
 a:hover svg {
   transform: scale(1.1);
 }
+
+/* ── New civic landing portal cards ─────────────────────────── */
+
+.portal-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 28px 28px 24px;
+  background: #ffffff;
+  border: 1px solid #dde3ea;
+  border-top: 3px solid transparent;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.portal-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(15, 77, 144, 0.10);
+  text-decoration: none;
+}
+
+.portal-card--assessor {
+  border-top-color: #0f4d90;
+}
+
+.portal-card--assessor:hover {
+  border-color: #b8cfe8;
+  border-top-color: #0f4d90;
+}
+
+.portal-card--owner {
+  border-top-color: #d9541e;
+}
+
+.portal-card--owner:hover {
+  border-color: #e8c8b8;
+  border-top-color: #d9541e;
+}
+
+.portal-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.portal-card-icon {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.portal-card-icon--assessor {
+  background: rgba(15, 77, 144, 0.09);
+  color: #0f4d90;
+}
+
+.portal-card-icon--owner {
+  background: rgba(217, 84, 30, 0.09);
+  color: #d9541e;
+}
+
+.portal-card-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  margin-bottom: 5px;
+}
+
+.portal-card-tag--assessor {
+  background: rgba(15, 77, 144, 0.08);
+  color: #0f4d90;
+}
+
+.portal-card-tag--owner {
+  background: rgba(217, 84, 30, 0.08);
+  color: #d9541e;
+}
+
+.portal-card-title {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #1a2035;
+  line-height: 1.25;
+  font-family: 'Open Sans', 'Inter', sans-serif;
+}
+
+.portal-card-desc {
+  color: #4a5568;
+  font-size: 0.93rem;
+  line-height: 1.65;
+}
+
+.portal-card-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 7px;
+  border-top: 1px solid #edf0f4;
+  padding-top: 16px;
+}
+
+.portal-card-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: #4a5568;
+  line-height: 1.45;
+}
+
+.portal-card-list li::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex: 0 0 5px;
+  margin-top: 5px;
+}
+
+.portal-card--assessor .portal-card-list li::before {
+  background: #0f4d90;
+}
+
+.portal-card--owner .portal-card-list li::before {
+  background: #d9541e;
+}
+
+.portal-card-cta {
+  margin-top: auto;
+  padding-top: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.portal-card-cta--assessor {
+  color: #0f4d90;
+}
+
+.portal-card-cta--owner {
+  color: #d9541e;
+}
+
+/* override old hover rules that would interfere with new cards */
+a.portal-card[href*="./reviewer/"]:hover,
+a.portal-card[href*="./widget/"]:hover {
+  background-color: #ffffff;
+  box-shadow: 0 6px 24px rgba(15, 77, 144, 0.10);
+}
+
+a.portal-card:hover svg {
+  transform: translateX(4px) scale(1);
+}
+
+a.portal-card:hover .portal-card-icon svg {
+  transform: scale(1);
+}
+
+/* focus ring in civic blue */
+a.portal-card:focus {
+  outline: 2px solid #0f4d90;
+  outline-offset: 2px;
+}
